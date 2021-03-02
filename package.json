@@ -1,8 +1,12 @@
 {
   "name": "osu-npm",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Access osu! data without an API key.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Readtt/osu-npm.git"
+  },
   "dependencies": {
     "cheerio": "^1.0.0-rc.5",
     "puppeteer": "^5.5.0",
