@@ -1,0 +1,23 @@
+{
+  "name": "osu-npm",
+  "version": "1.0.2",
+  "description": "Access osu! data without an API key.",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "puppeteer": "^5.5.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "osu!",
+    "web scraper",
+    "web scraping",
+    "javascript"
+  ],
+  "author": "HK",
+  "license": "ISC"
+}
