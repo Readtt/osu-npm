@@ -104,7 +104,7 @@ Await/Async example
 const api = require('osu-npm')
 
 async function test() {
-    await api.return_contests_list(res => console.log(res))
+    await api.get_contests_list(res => console.log(res))
 }
       
 test();

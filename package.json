@@ -1,6 +1,6 @@
 {
   "name": "osu-npm",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Access osu! data without an API key.",
   "main": "index.js",
   "repository": {
