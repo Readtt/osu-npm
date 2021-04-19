@@ -1,5 +1,8 @@
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
+const {
+    date
+} = require('../data')
 
 async function get_news_at_index(index, callback) {
 
@@ -33,7 +36,7 @@ async function get_news_at_index(index, callback) {
             }
         }
 
-        var news_at_index_dictZip = dictZip(date, [title, preview, author, cover, exactTime, time, link])
+        var news_at_index_dictZip = dictZip(date(), [title, preview, author, cover, exactTime, time, link])
 
         callback(news_at_index_dictZip)
     } else {

@@ -1,5 +1,8 @@
 const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
+const {
+    diffStats
+} = require('../data')
 
 async function get_difficulty_stats(code, diff_code, callback) {
     var url = `https://osu.ppy.sh/beatmapsets/${code}#osu/${diff_code}`
@@ -35,7 +38,7 @@ async function get_difficulty_stats(code, diff_code, callback) {
         }
     }
 
-    var get_difficulty_stats_dictZip = dictZip(diffStats, [length, bpm, circleCount, sliderCount, circleSize, hpDrain, accuracy, approachRate, starDifficulty])
+    var get_difficulty_stats_dictZip = dictZip(diffStats(), [length, bpm, circleCount, sliderCount, circleSize, hpDrain, accuracy, approachRate, starDifficulty])
 
     callback(get_difficulty_stats_dictZip)
 }

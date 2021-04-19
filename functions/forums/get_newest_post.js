@@ -1,5 +1,8 @@
 const cheerio = require('cheerio');
 const request = require('request');
+const {
+    post
+} = require('../data')
 
 function get_newest_post(forumCode, callback) {
     request({
@@ -27,7 +30,7 @@ function get_newest_post(forumCode, callback) {
             }
         }
 
-        var newest_post_dictZip = dictZip(post, [title, author, replies, views, timeago, link])
+        var newest_post_dictZip = dictZip(post(), [title, author, replies, views, timeago, link])
 
         callback(newest_post_dictZip)
     })

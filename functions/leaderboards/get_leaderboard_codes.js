@@ -1,4 +1,4 @@
-var {
+const {
     leaderboards
 } = require('../data')
 

@@ -1,5 +1,8 @@
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
+const {
+    date
+} = require('../data')
 
 async function get_most_recent_news(callback) {
 
@@ -32,7 +35,7 @@ async function get_most_recent_news(callback) {
         }
     }
 
-    var most_recent_news_dictZip = dictZip(date, [title, preview, author, cover, exactTime, time, link])
+    var most_recent_news_dictZip = dictZip(date(), [title, preview, author, cover, exactTime, time, link])
 
     callback(most_recent_news_dictZip)
 

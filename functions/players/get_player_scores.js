@@ -1,5 +1,8 @@
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
+const {
+    scores
+} = require('../data')
 
 async function get_player_scores(username, gamemode, callback) {
 
@@ -44,7 +47,7 @@ async function get_player_scores(username, gamemode, callback) {
         }
     }
 
-    var player_scores_dictZip = dictZip(scores, [rankedScore, totalScore, SSX, SS, SX, S, A])
+    var player_scores_dictZip = dictZip(scores(), [rankedScore, totalScore, SSX, SS, SX, S, A])
 
     if (!callback) {
         gamemode(player_scores_dictZip)

@@ -1,5 +1,8 @@
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
+const {
+    mapStats
+} = require('../data')
 
 async function get_beatmap_stats(code, callback) {
     var url = `https://osu.ppy.sh/beatmapsets/${code}`
@@ -47,7 +50,7 @@ async function get_beatmap_stats(code, callback) {
         }
     }
 
-    var get_beatmap_stats_dictZip = dictZip(mapStats,
+    var get_beatmap_stats_dictZip = dictZip(mapStats(),
         [title, author, mapper, status, exactSubmitted, submitted, playCount, favourites, cover, download, genre, language, tags])
 
     callback(get_beatmap_stats_dictZip)
